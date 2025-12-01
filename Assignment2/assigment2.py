@@ -4,7 +4,7 @@ from scipy import signal
 
 # -------------- TASK 1 -------------- #
 
-n = 11                              # tidsintervallkonstant, |nw0| < 15e3
+n = 12                              # tidsintervallkonstant, |nw0| < 15e3
 T0 = 0.005
 w0 = 400 * np.pi                    # 2 * np.pi / T0
 n2 = np.arange(-n, n + 1, 1) 
@@ -72,9 +72,9 @@ fig, ax = plt.subplots(2, 1)
 # Plot magnitude spectrum
 ax[0].stem(wn, np.abs(Xn), linefmt='orange', label="X($\omega$)")
 ax[0].stem(wn, np.abs(Yn), linefmt='red', label="Y($\omega$)")
-#ax[0].plot(wn, np.abs(Hn), linewidth=1, label="H(w)")
+ax[0].plot(wn, np.abs(Hn), linewidth=1, label="H(w)")
 ax[0].set_title("Magnitude spectrum")
-#ax[0].set_xlabel('$\omega$ / rad / s')
+ax[0].set_xlabel('$\omega$ / rad / s')
 ax[0].set_ylabel('|Y($\omega$)|, |X($\omega$)|')
 ax[0].grid()
 ax[0].legend()
