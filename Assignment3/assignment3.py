@@ -16,54 +16,54 @@ fb = 2000
      
 # -------------- TASK 1 -------------- #
 
-# sd.play(x_k, fs, blocking=True) # f = 10000 Hz
-# #sd.play(x_k, fs2, blocking=True) # f = 1100 Hz
+sd.play(x_k, fs, blocking=True) # f = 10000 Hz
+#sd.play(x_k, fs2, blocking=True) # f = 1100 Hz
 
-# # Plot x(t), x[k]
-# fig, ax = plt.subplots()
-# ax.stem(tk, x_k, label="x[k], discrete")
-# ax.plot(tk, x_k, label="x(t), continuous")
-# ax.set_title("Task 1")
-# ax.set_xlabel('t (s)')
-# ax.set_ylabel('x(t)')
-# ax.legend()
-# ax.set_xlim(0, 0.003) 
-# ax.set_ylim(-1.1, 1.1)
-# ax.grid()
-# plt.show()
+# Plot x(t), x[k]
+fig, ax = plt.subplots()
+ax.stem(tk, x_k, label="x[k], discrete")
+ax.plot(tk, x_k, label="x(t), continuous")
+ax.set_title("Task 1")
+ax.set_xlabel('t (s)')
+ax.set_ylabel('x(t)')
+ax.legend()
+ax.set_xlim(0, 0.003) 
+ax.set_ylim(-1.1, 1.1)
+ax.grid()
+plt.show()
 
-# # -------------- TASK 2 -------------- #
-# tk2 = np.arange(T0, T1, 1/2000)
-# x_t2 = np.cos(w*np.pi*tk2)
-# sd.play(x_t2, fb, blocking=True) 
+# -------------- TASK 2 -------------- #
+tk2 = np.arange(T0, T1, 1/2000)
+x_t2 = np.cos(w*np.pi*tk2)
+sd.play(x_t2, fb, blocking=True) 
 
-# fig, ax = plt.subplots()
-# ax.stem(tk2, x_t2, label="x[k], discrete")
-# ax.plot(tk2, x_t2, label="x(t), continuous")
-# ax.set_title("Task 1")
-# ax.set_xlabel('t (s)')
-# ax.set_ylabel('x(t)')
-# ax.legend()
-# ax.set_xlim(0, 0.003) 
-# ax.set_ylim(-1.1, 1.1)
-# ax.grid()
-# plt.show()
+fig, ax = plt.subplots()
+ax.stem(tk2, x_t2, label="x[k], discrete")
+ax.plot(tk2, x_t2, label="x(t), continuous")
+ax.set_title("Task 1")
+ax.set_xlabel('t (s)')
+ax.set_ylabel('x(t)')
+ax.legend()
+ax.set_xlim(0, 0.003) 
+ax.set_ylim(-1.1, 1.1)
+ax.grid()
+plt.show()
 
-# y_t = np.sin(w*np.pi*tk)
+y_t = np.sin(w*np.pi*tk)
 
-# sd.play(y_t, fs, blocking=True) # låter samma som 1a) bara lite skillnad i phase
+sd.play(y_t, fs, blocking=True) # låter samma som 1a) bara lite skillnad i phase
 
-# fig, ax = plt.subplots()
-# ax.stem(tk, y_t, label="y[k], discrete")
-# ax.plot(tk, y_t, label="y(t), continuous")
-# ax.set_title("Task 2")
-# ax.set_xlabel('t (s)')
-# ax.set_ylabel('y(t)')
-# ax.legend()
-# ax.set_xlim(0, 0.003) 
-# ax.set_ylim(-1.1, 1.1)
-# ax.grid()
-# plt.show()
+fig, ax = plt.subplots()
+ax.stem(tk, y_t, label="y[k], discrete")
+ax.plot(tk, y_t, label="y(t), continuous")
+ax.set_title("Task 2")
+ax.set_xlabel('t (s)')
+ax.set_ylabel('y(t)')
+ax.legend()
+ax.set_xlim(0, 0.003) 
+ax.set_ylim(-1.1, 1.1)
+ax.grid()
+plt.show()
 
 # -------------- TASK 3 -------------- #
 T = 10
